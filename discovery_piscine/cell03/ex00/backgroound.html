@@ -9,19 +9,14 @@
     <body>
         <button class="btn" onclick="changeBackground()">Change background</button>
     </body>
+
     <script>
         function changeBackground() {
-            const colors = [
-                "red",
-                "blue",
-                "green",
-                "yellow",
-                "purple",
-                "orange",
-            ];
-            const randomColor =
-                colors[Math.floor(Math.random() * colors.length)];
-            document.body.style.backgroundColor = randomColor;
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
         }
     </script>
 </html>
