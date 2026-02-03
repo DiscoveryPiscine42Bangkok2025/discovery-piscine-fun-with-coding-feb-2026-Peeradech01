@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>It's over 9000</title>
+    </head>
+    <body>
+      <div style="text-align: center; justify-content: center;">
+          <h1>calculator</h1>
+            <input type="text" id="left" />
+            <select id="op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id="right" />
+
+            <input type="button" value="Try me!" onclick="calc()" />
+        </div>
+
+        <script>
+            function calc() {
+                let a = document.getElementById("left").value;
+                let b = document.getElementById("right").value;
+                let op = document.getElementById("op").value;
+
+                if (!/^\d+$/.test(a) || !/^\d+$/.test(b)) {
+                    alert("Error :(");
+                    return;
+                }
+
+                a = parseInt(a);
+                b = parseInt(b);
+
+                if ((op === "/" || op === "%") && b === 0) {
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    return;
+                }
+
+                let result;
+                if (op === "+") result = a + b;
+                else if (op === "-") result = a - b;
+                else if (op === "*") result = a * b;
+                else if (op === "/") result = a / b;
+                else if (op === "%") result = a % b;
+
+                alert(result);
+                console.log(result);
+            }
+
+            setInterval(function () {
+                alert("Please, use me...");
+            }, 30000);
+        </script>
+    </body>
+</html>
