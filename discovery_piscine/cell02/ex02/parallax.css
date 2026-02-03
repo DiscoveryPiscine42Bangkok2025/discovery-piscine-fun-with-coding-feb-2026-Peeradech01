@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image1 {
+    background-image: url("https://picsum.photos/1200/800?random=1");
+}
+
+.image2 {
+    background-image: url("https://picsum.photos/1200/800?random=2");
+}
+
+.text {
+    color: white;
+    font-size: 48px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+}
+
+.black {
+    height: 500px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
