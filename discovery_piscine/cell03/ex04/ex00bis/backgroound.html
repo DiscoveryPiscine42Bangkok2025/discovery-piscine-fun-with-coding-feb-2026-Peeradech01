@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="backgroound.css" />
+        <title>cell04-ex00</title>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <button class="btn">Change background</button>
+    </body>
+
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+
+                $("body").css(
+                    "background-color",
+                    "rgb(" + r + "," + g + "," + b + ")",
+                );
+            });
+        });
+    </script>
+</html>
