@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="backgroound.css" />
+        <title>cell03-ex00</title>
+    </head>
+    <body>
+        <button class="btn" onclick="changeBackground()">Change background</button>
+    </body>
+    <script>
+        function changeBackground() {
+            const colors = [
+                "red",
+                "blue",
+                "green",
+                "yellow",
+                "purple",
+                "orange",
+            ];
+            const randomColor =
+                colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</html>
